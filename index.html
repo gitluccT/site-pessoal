@@ -15,7 +15,12 @@
        </p>
     </header>
 
-    <main>
+    <div class="button">
+        <button class="button-vizualicao" onclick="mudarGrade()">Vizualização Grade</button>
+        <button class="button-vizualicao" onclick="mudarLista()">Vizualização Lista</button>
+    </div>
+
+    <main id="principal">
         <section>
             <h2>Minhas habilidades </h2>
                 <ul>
@@ -89,18 +94,32 @@
    
     
 </body>
+
+<script>
+    function mudarGrade(){
+
+        const principal = document.getElementById('principal')
+        principal.classList.add("modo-grade")
+    }
+
+    function mudarLista(){
+
+        const principal = document.getElementById('principal')
+         principal.classList.remove("modo-grade")
+    }
+</script>
  <style>
         body{
             margin: 0;
             padding: 0;
-            background-color: #e6e9f6;
-            color: rgb(33, 80, 128);
+            background-color: #ffffff;
+            color: rgb(128, 33, 33);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
         header{
             
-            background-color: #e6e9f6;
+            background-color: #ffffff;
             text-align: center;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -154,7 +173,7 @@
         }
 
         a{
-            color: blueviolet;
+            color: rgb(156, 10, 10);
             text-decoration: none;
 
         }
@@ -165,7 +184,35 @@
             cursor: pointer;
         }
 
+        .button {
+
+            text-align: right;
+            
+
+        }
+
+
+        .button-vizualicao{
+            font-size: 10px;
+            color:rgb(88, 7, 7);
+            margin-left: 10px;
+        }
+
+        .modo-grade{
+
+            padding-top: 20px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
         
+        }
+
+        .modo-grade section{
+            width: 40%;
+        }
 
 
         
